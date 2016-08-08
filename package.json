@@ -1,0 +1,16 @@
+{
+  "name": "@scola/cache-browser",
+  "version": "0.0.0",
+  "description": "Browser Cache",
+  "repository": "github:scola84/node-cache-browser",
+  "author": "M.C. van den Boogaart <scola@kvdb.name>",
+  "license": "MIT",
+  "main": "./dist/cache-browser.js",
+  "jsnext:main": "./index.js",
+  "devDependencies": {
+    "rollup": "^0.26.3"
+  },
+  "scripts": {
+    "build": "rollup -i ./index.js -o ./dist/cache-browser.js -f cjs"
+  }
+}
