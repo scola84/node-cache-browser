@@ -16,32 +16,32 @@ export default class BrowserCache {
     this.interval(null, false);
   }
 
-  storage(storage) {
-    if (typeof storage === 'undefined') {
+  storage(value) {
+    if (typeof value === 'undefined') {
       return this._storage;
     }
 
-    this._storage = storage;
+    this._storage = value;
     return this;
   }
 
-  lifetime(lifetime) {
-    if (typeof lifetime === 'undefined') {
+  lifetime(value) {
+    if (typeof value === 'undefined') {
       return this._lifetime;
     }
 
-    this._lifetime = lifetime;
+    this._lifetime = value;
     return this;
   }
 
-  interval(interval, action) {
+  interval(value, action) {
     clearInterval(this._interval);
 
     if (action === false) {
       return this;
     }
 
-    this._interval = setInterval(this._gc.bind(this), interval);
+    this._interval = setInterval(this._gc.bind(this), value);
     return this;
   }
 
